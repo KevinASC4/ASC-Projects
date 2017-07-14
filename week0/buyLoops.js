@@ -11,8 +11,8 @@ var userItems =[]
 //sword costs $500
 //food costs $100
 
-while (CurrentMoney>=100) {
-    console.log("You currently have " + CurrentMoney + ". Sword");
+while (CurrentMoney >= 100) {
+    console.log("You currently have $" + CurrentMoney + " and a dagger. ");
     var choice = prompt("Do you want a sword, or do you want food?");
     if(choice== "sword"){
         if(CurrentMoney>=500){
@@ -33,8 +33,8 @@ console.log("Watch out for that frost troll! Best of luck on your adventure!");
 var seeInventory= prompt("Would you like to see your Inventory? (y,n)");
 if (seeInventory == "y"){
     console.log("Your inventory is " + userItems);
-}else{
-    console.log("Have a good day!")
-}if (seeInventory == "n"){
+    console.log("Have a great day!!")
+}
+if (seeInventory == "n"){
     console.log("K Bye")
 }
