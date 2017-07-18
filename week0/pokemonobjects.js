@@ -48,6 +48,7 @@ var sixthPokemon = {
         "type" : "Dark" 
 };
 var pokemonRoster = [firstPokemon,secondPokemon,thirdPokemon,fourthPokemon,fifthPokemon,sixthPokemon];
+var randomPokemon = pokemonRoster[Math.floor(Math.random()*pokemonRoster.length)] ;
 
 function printRoster(){
     for(var i = 0 ; i < pokemonRoster.length; i++){
@@ -66,7 +67,6 @@ pokemonAttacked();
 
 function userAttack(){
     var userChoice = prompt("Hey trainer! How much damage would you like to inflict on one of the pokemons?");
-    var randomPokemon = pokemonRoster[Math.floor(Math.random()*pokemonRoster.length)] ;
     var randomPokemonhealth = randomPokemon.hp - userChoice;
     console.log("You attacked " + randomPokemon.name + " and their hp is now " + randomPokemonhealth)
 }
@@ -74,7 +74,27 @@ userAttack();
 
 function userPokemon(){
     var userPokemon = prompt("Great job trainer! Now you can add a pokemon to the roster! Which pokemon would you like to add?");
-    pokemonRoster.push(userPokemon);
-    console.log("You just added " + userPokemon + " to your roster!!")
+    pokemonRoster = pokemonRoster.push(userPokemon);
+    console.log("You just added " + userPokemon + " to your roster!!");
 }
-userPokemon()
+userPokemon(); 
+
+function removePokemon(){
+var userremovePokemon= prompt("Hey user, would you like to remove a random pokemon? yes//no ")
+    if(userremovePokemon == "yes"){
+        pokemonRoster =  pokemonRoster.pop(randomPokemon);
+        var userNewroster = prompt("Would you like to see your roster?");
+            if(userNewroster == "yes"){
+                console.log(pokemonRoster);
+            }
+            else{
+                console.log("Great, have a nice day!")
+            }
+            }
+    
+    else{
+        console.log("Okay Trainer, have a great day!")
+        
+    }
+}
+removePokemon()
