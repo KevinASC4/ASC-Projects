@@ -43,6 +43,10 @@ noStroke();
 fill(255,105,180);
 var playerRect = rect(x,700,80,40);
 var cannon = rect(x+35,y-20,20,20);
+if(Bullet.x<alienShips.xE + alienShips.width && Bullet.x + Bullet.width>alienShips.xE &&Bullet.y<alienShips.y + alienShips.height&&Bullet.height + Bullet.y>alienShips.yE){
+  alienArr.splice()
+};
+}
 
 fill('white');
 var alienArr = [alienShip1, alienShip2,alienShip3, alienShip4, alienShip5];
@@ -66,6 +70,9 @@ for(i = 0; i < bulletChamber.length; i++){
   }
   if (keyIsDown(RIGHT_ARROW)) {
     x = x + 5;
+  }
+  if(keyIsDown(SHIFT)){
+    bulletChamber.push(new Bullet(x,y-10,w,h));
   }
 }
 

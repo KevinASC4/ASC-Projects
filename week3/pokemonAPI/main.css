@@ -1,0 +1,10 @@
+body{
+    background: black;
+}
+h1{
+    color:ghostwhite;
+    text-align: center;
+    font-family: "Impact";
+    font-size: 80px;
+    text-shadow: -5px -5px 4px gray;
+}
