@@ -1,10 +1,51 @@
 body{
-    background: black;
+    background-image: url('https://images8.alphacoders.com/548/thumb-1920-548142.jpg');
+    background-repeat: no-repeat;
+    background-color: black;
+    background-size: cover;
+   
 }
 h1{
-    color:ghostwhite;
+    color:white;
     text-align: center;
     font-family: "Impact";
     font-size: 80px;
     text-shadow: -5px -5px 4px gray;
+}
+.centerPage{
+  position: absolute;
+  right: 275px;
+  border-left: 4px hidden;
+  border-right: 4px hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 800px;
+  width: 800px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#pokename{
+    font-family: Verdana;
+    text-transform: capitalize;
+    text-align: center;
+    height: 30px;
+    width: 100%;
+    font-size: 80px;
+}
+#YourPokemon{
+    align-content: center;
+    height:250px;
+    width:250px;
+}
+button {
+    margin-left: 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    background-color: white;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+#giphy{
+    height: 300px;
+    width: 300px;
 }
