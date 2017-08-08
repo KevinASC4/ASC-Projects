@@ -1,0 +1,25 @@
+.container{
+    text-align: center;
+    
+    padding:5%;
+    margin:auto;
+
+}
+
+button{
+    padding:10px
+}
+.scoreboard{
+    background:white;
+    color:black
+}
+.game{
+    text-align: center;
+}
+body{
+    background:black;
+    color:white
+}
+#lead{
+    text-align: center;
+}

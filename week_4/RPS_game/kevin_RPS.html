@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--firebase-->
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCmbnhI0l0ANOoyi5FvaLZ4ZfkNjZ1Gb3A",
+    authDomain: "rock-paper-scissors-ff2c7.firebaseapp.com",
+    databaseURL: "https://rock-paper-scissors-ff2c7.firebaseio.com",
+    projectId: "rock-paper-scissors-ff2c7",
+    storageBucket: "",
+    messagingSenderId: "314384281604"
+  };
+  firebase.initializeApp(config);
+</script>
+<!--Scripts-->
+    <link rel = "stylesheet" href = "kevin_RPS.css">
+    <!--JQuery-->
+    <script
+    src="http://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+    <!--JavaScript-->
+    <script src = "kevin_RPS.js"></script>
+    <!--Title-->
+    <title>Rock, Paper, Scissors</title>
+</head>
+<body>
+    <!--Game functions-->
+    <div class="game">
+    <h1>Rock,Paper, Scissors!</h1>
+    <button id = "rock" onclick="game(0)">Rock</button>
+    <button id = "paper" onclick="game(1)">Paper</button>
+    <button id = "scissor" onclick="game(2)">Scissor</button><br>
+    <h2 id="results"></h2>
+    <button id ="reset" onclick="reset()">End Game</button>
+    </div>
+    <!--Login-->
+    <div class="container">
+    <input id="login" placeholder="Your Initials"></input>
+    <button id ="db" onclick="score()">Submit Scores</button><br>
+    <!--scoreboard-->
+    <div class = "scoreboard">
+        <h2>Scoreboard</h2>
+        <h4 id = "win">Wins: </h4><br>
+        <h4 id="loss">Loss: </h4>
+    </div>
+    </div>
+    <h1 id="lead">Leaderboard Coming soon!</h1>
+</body>
+</html>
