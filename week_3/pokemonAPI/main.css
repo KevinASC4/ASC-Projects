@@ -14,12 +14,8 @@ h1{
 }
 .centerPage{
   position: absolute;
-  right: 275px;
-  border-left: 4px hidden;
-  border-right: 4px hidden;
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 800px;
-  width: 800px;
+  background-color: rgba(0, 0, 0, 0.1);
+  height:400px;
   font-weight: bold;
   text-align: center;
 }
@@ -36,6 +32,9 @@ h1{
     align-content: center;
     height:250px;
     width:250px;
+}
+#loadingPokemon {
+    display: none;
 }
 button {
     margin-left: 20px;
@@ -57,8 +56,7 @@ button {
 
 body{
     text-align: center;
-    background-image: url("../../assets/wall.jpg");
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     color: white;
 }
 
@@ -83,10 +81,7 @@ p{
    margin-top: 5px;
 }
 
-img{
-    border-radius: 50%;
-    width:150px;
-}
+
 
 .g-signin2{
     position: absolute;
@@ -130,4 +125,31 @@ img{
 
 .hidden{
     display: none;
+}
+#Stats{
+    font-family: Verdana;
+    text-transform: capitalize;
+    text-align: center;
+    
+}
+.buttons{
+    width:100%;
+}
+.Gen1buttons{
+    float:left !important;
+}
+.Gen2buttons{
+    float:left !important;
+}
+.Gen3buttons{
+    float:left !important
+}
+.Gen4buttons{
+    float:right !important;
+}
+.Gen5buttons{
+    float:right !important;
+}
+.Gen6buttons{
+    float:right !important
 }

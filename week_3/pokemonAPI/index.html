@@ -5,72 +5,179 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id" content="653821690080-ga40eknsadnq3qt7bedk8dvkc10cej5t.apps.googleusercontent.com">
-    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-        crossorigin="anonymous"></script>
-    <script src="pokemonAPI.js"></script>
+    <title>Pokematch</title>
+     <!--<script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="653821690080-ga40eknsadnq3qt7bedk8dvkc10cej5t.apps.googleusercontent.com">-->
     <link rel="stylesheet" href="main.css">
    
 
 </head>
 
 <body>
-    <script src="sketch.js"></script>
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <!--<div class="g-signin2" data-onsuccess="onSignIn"></div>-->
     <div class="centerPage">
         <h1> Pokemon Match Finder </h1>
-    <div>
+    <div class= "buttons">
         <!-- <input id = "type" placeholder="What Type(s)?(lowercase)" value="userChoice"></input><br> -->
         <!--<input id = "evolution" placeholder="What evolution is it?(1-3)"></input>-->
-        <div class="buttons">
-        <button onclick="searchPokemon('fire')"> Fire</button>
-        <button onclick="searchPokemon('water')"> Water</button>
-        <button onclick="searchPokemon('flying')"> Flying</button>
-        <button onclick="searchPokemon('dark')"> Dark</button><br>
-        <button onclick="searchPokemon('ground')"> Ground</button>
-        <button onclick="searchPokemon('fairy')"> Fairy</button>
-        <button onclick="searchPokemon('normal')"> Normal</button>
-        <button onclick="searchPokemon('electric')"> Electric</button><br>
-        <button onclick="searchPokemon('psychic')"> Psychic</button>
-        <button onclick="searchPokemon('ice')"> Ice</button>
-        <button onclick="searchPokemon('rock')"> Rock</button>
-        <button onclick="searchPokemon('bug')"> Bug</button>
-        <button onclick="searchPokemon('ghost')"> Ghost</button><br>
-        <button onclick="searchPokemon('fighting')"> Fighting</button>
-        <button onclick="searchPokemon('poison')"> Poison</button>
-        <button onclick="searchPokemon('dragon')"> Dragon</button>
-        <button onclick="searchPokemon('steel')"> Steel</button>
-        <button onclick="searchPokemon('grass')"> Grass</button><br>>
-        </div>
-    <div>
-        <p id="pokename" style="color: white"></p><br>
+            <div class="Gen1buttons">
+                <h2>Gen1</h2><br>
+                <select>
+                        <option value="">None</option>
+                        <option value="fire,1">Fire</option>
+                        <option value="water,1">Water</option>
+                        <option value="flying,1">Flying</option>
+                        <option value="ground,1">Ground</option>
+                        <option value="normal,1">Normal</option>
+                        <option value="electric,1">Electric</option>
+                        <option value="psychic,1">Psychic</option>
+                        <option value="ice,1">Ice</option>
+                        <option value="rock,1">Rock</option>
+                        <option value="bug,1">Bug</option>
+                        <option value="ghost,1">Ghost</option>
+                        <option value="fighting,1">Fighting</option>
+                        <option value="poison,1">Poison</option>
+                        <option value="dragon,1">Dragon</option>
+                        <option value="grass,1">Grass</option>
+        </select>
+                </div>
+            
+            <div class="Gen2buttons">
+                <h2>Gen2</h2><br>
+                <select>
+                        <option value="">None</option>
+                        <option value="fire,2">Fire</option>
+                        <option value="water,2">Water</option>
+                        <option value="flying,2">Flying</option>
+                        <option value="dark,2">Dark</option>
+                        <option value="ground,2">Ground</option>
+                        <option value="normal,2">Normal</option>
+                        <option value="electric,2">Electric</option>
+                        <option value="psychic,2">Psychic</option>
+                        <option value="ice,2">Ice</option>
+                        <option value="rock,2">Rock</option>
+                        <option value="bug,2">Bug</option>
+                        <option value="ghost,2">Ghost</option>
+                        <option value="fighting,2">Fighting</option>
+                        <option value="poison,2">Poison</option>
+                        <option value="dragon,2">Dragon</option>
+                        <option value="steel,2">Steel</option>
+                        <option value="grass,2">Grass</option>
+                        <option value="unknown,2">Unknown</option>
+                </select>
+            </div>
+            <div class="Gen3buttons">
+                <h2>Gen3</h2><br>
+                    <select>
+                        <option value="">None</option>
+                        <option value="fire,3">Fire</option>
+                        <option value="water,3">Water</option>
+                        <option value="flying,3">Flying</option>
+                        <option value="dark,3">Dark</option>
+                        <option value="ground,3">Ground</option>
+                        <option value="normal,3">Normal</option>
+                        <option value="electric,3">Electric</option>
+                        <option value="psychic,3">Psychic</option>
+                        <option value="ice,3">Ice</option>
+                        <option value="rock,3">Rock</option>
+                        <option value="bug,3">Bug</option>
+                        <option value="ghost,3">Ghost</option>
+                        <option value="fighting,3">Fighting</option>
+                        <option value="poison,3">Poison</option>
+                        <option value="dragon,3">Dragon</option>
+                        <option value="steel,3">Steel</option>
+                        <option value="grass,3">Grass</option>
+                        <option value="shadow,3">Shadow</option>
+                    </select>
+                </div>
+                <div class="Gen6buttons">
+                <h2>Gen6</h2><br>
+                    <select>
+                    `   <option value="fire,6">Fire</option>
+                        <option value="water,6">Water</option>
+                        <option value="flying,6">Flying</option>
+                        <option value="dark,6">Dark</option>
+                        <option value="ground,6">Ground</option>
+                        <option value="fairy,6">Fairy</option>
+                        <option value="normal,6">Normal</option>
+                        <option value="water,6">Electric</option>
+                        <option value="psychic,6">Psychic</option>
+                        <option value="ice,6">Ice</option>
+                        <option value="rock,6">Rock</option>
+                        <option value="bug,6">Bug</option>
+                        <option value="ghost,6">Ghost</option>
+                        <option value="fighting,6">Fighting</option>
+                        <option value="poison,6">Poison</option>
+                        <option value="dragon,6">Dragon</option>
+                        <option value="steel,6">Steel</option>
+                        <option value="grass,6">Grass</option> 
+                    </select>
+            </div>
+            <div class="Gen5buttons">
+                <h2>Gen5</h2><br>
+                    <select>
+                        <option value="">None</option>
+                        <option value="fire,5">Fire</option>
+                        <option value="water,5">Water</option>
+                        <option value="flying,5">Flying</option>
+                        <option value="dark,5">Dark</option>
+                        <option value="ground,5">Ground</option>
+                        <option value="normal,5">Normal</option>
+                        <option value="electric,5">Electric</option>
+                        <option value="psychic,5">Psychic</option>
+                        <option value="ice,5">Ice</option>
+                        <option value="rock,5">Rock</option>
+                        <option value="bug,5">Bug</option>
+                        <option value="ghost,5">Ghost</option>
+                        <option value="fighting,5">Fighting</option>
+                        <option value="poison,5">Poison</option>
+                        <option value="dragon,5">Dragon</option>
+                        <option value="steel,5">Steel</option>
+                        <option value="grass,5">Grass</option>
+                    </select>
+                </div>
+                <div class="Gen4buttons">
+                <h2>Gen4</h2><br>
+                    <select>
+                        <option value="">None</option>
+                        <option value="water,4">Water</option>
+                        <option value="flying,4">Flying</option>
+                        <option value="dark,4">Dark</option>
+                        <option value="ground,4">Ground</option>
+                        <option value="normal,4">Normal</option>
+                        <option value="electric,4">Electric</option>
+                        <option value="psychic,4">Psychic</option>
+                        <option value="ice,4">Ice</option>
+                        <option value="rock,4">Rock</option>
+                        <option value="bug,4">Bug</option>
+                        <option value="ghost,4">Ghost</option>
+                        <option value="fighting,4">Fighting</option>
+                        <option value="poison,4">Poison</option>
+                        <option value="dragon,4">Dragon</option>
+                        <option value="steel,4">Steel</option>
+                        <option value="grass,4">Grass</option>
+                    </select>
+                </div>
+    <div class="YourPokemon">
+        <!--Gifs and results-->
+        <!--<p id="pokename" style="color: white"></p><br>-->
+        <p id="loadingPokemon">Loading Pokemon...</p>
         <img id="YourPokemon" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"><br>
-        <img id="giphy" src="">
+        <img id="giphy" src="https://media2.giphy.com/media/vsyKKf1t22nmw/giphy.gif">
     </div>
-
-
-   <div class ="mainContainer">
-        <!--Text greeting user-->
-        <header>
-            <h1>WELCOME <span class="userName">USER_NAME</span></h1>    
-       </header>
-
-       <!--Populate section with user data-->
-        <section>
-            <!--picture-->
-            <div class = "userImg">
-                <img src="assets/placeholder.png">
-            </div>
-
-           <!--User Data-->
-            <div class="userData">
-                <h2>E-MAIL:</h2>
-                <p class="email">example@example.com</p>
-            </div>
-        </section>
+    <!--Putting the stats-->
+    <div class="stats">
+    <h1>Base Stats</h1>
+    <h3 id = "Stats"></h3>
     </div>
+    </div>
+</div>
+
+    
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous"></script>
+    <script src="pokemonAPI.js"></script>
+
 </body>
 
 </html>
