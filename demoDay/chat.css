@@ -28,8 +28,19 @@ div#OtherPersonsinfo{
 
 div.msg{
     border-bottom: solid;
-    border-color: black;
+    border-color: white;
     width: 400px;
     height: 125px;
     margin-bottom: 5px;
+}
+.nav-wrapper{
+background: #263238;
+}
+body {
+    color:white;
+
+    background: #37474f;
+}
+#meetup{
+    color:black
 }

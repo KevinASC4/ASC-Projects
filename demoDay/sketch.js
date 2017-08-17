@@ -1,5 +1,6 @@
 var uid, accessToken, userName, profilePic;
-var login = false;
+var loginbool = false;
+var provider = new firebase.auth.FacebookAuthProvider();
 
 // This is called with the results from from FB.getLoginStatus().
 function statusChangeCallback(response) {
@@ -12,8 +13,9 @@ function statusChangeCallback(response) {
         uid = response.authResponse.userID;
         accessToken = response.authResponse.accessToken;
         console.log(uid);
-        if (login == true) {
+        if (loginbool == true) {
             testAPI();
+            window.location.assign("home.html");
         }
     } else {
         // The person is not logged into your app or we are unable to tell.
@@ -28,7 +30,7 @@ function statusChangeCallback(response) {
 
 function checkLoginState() {
     FB.getLoginStatus(function (response) {
-        login = !login;
+        loginbool = !loginbool;
         statusChangeCallback(response);
     });
 }
@@ -55,6 +57,10 @@ window.fbAsyncInit = function () {
 function testAPI() {
     FB.api('/me', function (response) {
         userName = response.name;
+        alert(response.name);
+        var user = document.getElementById("#username");
+        $("username").text(userName);
+        user.text("Nigel");
         console.log('Successful login for: ' + response.name);
         console.log(response);
 
@@ -88,3 +94,21 @@ function testAPI() {
     }
     );
 }
+function login() {
+            // Log the user in via Twitter
+            var provider = new firebase.auth.FacebookAuthProvider();
+            //keep in mind you can add optionality
+            firebase.auth().signInWithPopup(provider).then(function (result) {
+                var token = accessToken;
+            }).catch(function (error) {
+                console.log("Error authenticating user:", error);
+                // Handle Errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                // The email of the user's account used.
+                var email = error.email;
+                // The firebase.auth.AuthCredential type that was used.
+                var credential = error.credential;
+                // ..
+            });
+        }
